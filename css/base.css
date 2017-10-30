@@ -30,7 +30,7 @@ figcaption.right{
     font-size: 80px;
     margin: 200px;
     margin-left: 0;
-    margin-right: 70px;
+    margin-right: 90px;
     float: right;
     display: inline;
     margin-bottom: 100px;
@@ -102,6 +102,11 @@ body {
     background-attachment: fixed;
     /*background-repeat: no-repeat;*/
 }
+
+/*footer,img{
+    display: inline-block;
+}
+*/
 
 #homebackground {
     background-size: contain;
@@ -465,7 +470,6 @@ li,a.menubar.active{
     position; relative;
     text-decoration: none;
     transition-duration: 0.4s;
-
 }
 
 #hometitle a:hover {
@@ -641,6 +645,12 @@ li,a.menubar.active{
 
 a img {
     float: center;
+    transition-duration: 0.4s;
+}
+
+a img:hover {
+    width:300px;
+    height:300px;
 }
 
 .contact {
@@ -651,11 +661,17 @@ a img {
     color: white;
     margin-bottom: 10%;
 }
+
 .contact input {
     margin-bottom: 20px;
     margin-top: 10px;
     width: 80%;
-    color: white;
+    color: black;
+    transition-duration: 0.4s;
+}
+
+.contact input:hover {
+    border: 1px solid #13C0E8;
 }
 
 .bigbox{
@@ -665,6 +681,7 @@ a img {
 
 .button {
     font-family: "Segoe UI";
+    color: white;
     font-size: 30px;
     background-color: #222;
     border: 1px solid #1CABE8;
