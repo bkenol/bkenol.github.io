@@ -97,7 +97,7 @@ h2:hover {
     opacity:0.5;
 }
 
-body {
+body.otherpage {
     font-size: 1em;
     line-height: 1.4;
     background-image: url(../img/topography.png);
@@ -106,15 +106,23 @@ body {
     /*background-repeat: no-repeat;*/
 }
 
+
 /*footer,img{
     display: inline-block;
 }
 */
+body.homeback {
+     font-size: 1em;
+    line-height: 1.4;
+    background-image: url(../img/coo_background.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 #homebackground {
-    background-size: contain;
-    background-position: center center;
-
+    background-size: cover;
+    background-position: auto;
+    background-repeat: no-repeat;
 }
 
 
