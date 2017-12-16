@@ -1,94 +1,418 @@
-<!doctype html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!DOCTYPE html>
+<html lang="en">
 
-	<title>Contact SIVANCY</title>
-	<meta name="The Official SIVANCY Website" content="">
-	<meta name="SIVANCY" content="">
+  <head>
 
-	<meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<link rel="shortcut icon" href="../img/SIVANCY.ico"/>
-	<link rel="stylesheet" href="../css/normalize.css">
-	<link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="../css/grid.css">
-	<link rel="stylesheet" href="../css/style.css">
+    <title>SIVANCY Unreleased</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Icons -->
+    <script src="https://use.fontawesome.com/0b15ad7bd2.js"></script>
+   
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../css/creative.min.css" rel="stylesheet">
+     <link href="../css/audio.css" rel="stylesheet">
+
+  </head>
+
+  <body class="otherpage" id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="secNav">
+      <div class="container">
+        <button 
+          class="navbar-toggler navbar-toggler-right" 
+          type="button" 
+          data-toggle="collapse" 
+          data-target="#navbarResponsive" 
+          aria-controls="navbarResponsive" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link js-scroll-trigger" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="releases.html">Releases</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="unreleased.html">Unreleased</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+      <div class="text-center text-white d-block mt-5 pt-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 mx-auto text-dark">
+              <h1>
+                <div>
+                  <strong>Unreleased Music</strong>
+                </div>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <main>
+      <div class="row songcontainer1">
+        <div class="col ml-2" id="songcontainer1">
+          <div class="row container-fluid">
+            <div id= "timeDisplay" class="col text-light container-fluid pl-0">
+            <span cursor="default" id="tracktime"> 0:00I0:00 </span>
+            </div>
+            <div id="songDuration" class="col text-light mb-5 mt-3">
+              <center>
+                <h2 class="d-inline">
+                <i class="fa fa-volume-down text-left mr-5 pr-5" aria-hidden="true"></i>
+                  <i class="fa fa-volume-up text-right ml-5 pl-5" aria-hidden="true"></i>
+                </h2>
+
+                
+                <input class="slider data-slider-v" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" type="range" min="1%" max="100%" value="80%" id="slidercontainer"/>
+            </center>
+          </div>
+          </div>
+        </div>
+         <div class="col pl-0 pr-0 pt-0">
+           <center>
+          <div class=" col pl-0" id="songcontainer1">
+
+            <div class="songtitle pt-4">
+              <h2>
+              <strong class="grow text-light">
+                Beat Preview
+              </strong>
+            </h2>
+          </div>
 
 
-	<script src="../js/modernizr-2.6.2.min.js"></script>
-	<script src="../js/scripts.js"></script>
 
-</head>
-	<body class="otherpage">
-		<nav>
-			<ul class="menubar">
-				<li><a class="menubar" href="../index.html">Home</a></li>
-				<li><a class="menubar" href="Releases.html">Releases</a></li>
-				<li><a class="active menubar" href="#">Unreleased</a></li>
-				<li><a class="menubar" href="About.html">About</a></li>
-				<li><a class="menubar" href="Contact.html">Contact</a></li>
-			</ul>
-		</nav>
+            <!--Audio Interface-->
+            <img class="cover z-depth-2 hoverable" src="../img/optmized.png" width="200px" height="200px" alt="immortal. (SIVANCY Edit)">
+            
+            <audio id="music" preload="true" 
+            ontimeupdate="document.getElementById('tracktime').innerHTML = (Math.floor(Math.floor(Math.floor(this.currentTime)/60)) + ':' + Math.floor(Math.floor(Math.floor(this.currentTime)%60)/10)) + ((Math.floor(this.currentTime)%60)%10) + 'I' + (Math.floor(Math.floor(this.duration)/60)) + ':' + (Math.floor(this.duration)%60);"
+           >
+              <source src="../music/80.wav">
+              <source src="../music/ogg/immortal.ogg">
+            </audio>
 
-		<main>
-			<center>
-				<h2 class="pagetitle">Unreleased Music</h2>
-			</center>
-			<div class="songcontainer1">
-				<center>
-					<ul>
-							<h2>Beat Preview</h2>
-							<a href="../music/generic preview.mp3" download><img src="../img/optmized.png"></a>
-							<audio class="songcontainer1" controls>
-								<source src="../music/generic preview.mp3" type="audio/mpeg">
-							</audio>
-					</ul>
-				</center>
-			</div>
-			<div class="songcontainer1 songcontainer2">
-				<center>
-					<ul>
-							<h2>Beat Preview 2</h2>
-							<a href="../music/beat preview 2.mp3" download><img src="../img/optmized.png"></a>
-							<audio class="songcontainer2" controls>
-								<source src="../music/beat preview 2.mp3" type="audio/mpeg">
-							</audio>
-					</ul>
-				</center>
-			</div>
-			<div class="songcontainer1">
-				<center>
-					<ul>
-							<h2>Distant Bliss</h2>
-							<a href="../music/beat preview 2.mp3" download><img src="../img/optmized.png"></a>
-							<audio class="songcontainer1" controls>
-								<source src="../music/Distant Bliss.wav" type="audio/wav">
-							</audio>
-					</ul>
-				</center>
-			</div>
-			<div class="songcontainer1 songcontainer2">
-				<center>
-					<ul>
-							<h2>Zedd, Alessia Cara - Stay (SIVANCY Remix)</h2>
-							<a href="../music/stay sivancy remix.mp3" download><img src="../img/stay sivancy remix cover.jpg"></a>
-							<audio class="songcontainer2" controls>
-								<source src="../music/stay sivancy remix.mp3" type="audio/mpeg">
-							</audio>
-					</ul>
-				</center>
-			</div>
-		</main>
+            <div id="wrapper">
+              <!--Audio Controls-->
+              <div id="audioplayer">
+                <a href="https://soundcloud.com/sivancy2/immortal" target="_blank">
+                <button id="dButton" class="download"></button>
+              </a>
+                <button id="pButton" class="play"></button> 
+                <button id="rsButton" class="restart"></button>
+                <div id="timeline">
+                  <div id="playhead"></div>
+                </div>
+              </div>
+                  <div class="pb-5"> </div>
+            </div>
+          </div>
+        </center>
+         </div>
+ 
+     </center>
+          <div class="col d-flex" id="songcontainer1">
+             <img id="SIVICON" src="../img/Sivancy-Icon 2.png" width="400px" height="400px">
+      </div>
 
-		
-	</body>
 
-<footer>
-	<div class="container clearfix content footer">
-		<center>
-			<h1>SIVANCY</h1>
-		</center>
-		</div>
-</footer>
+<div class="row songcontainer1">
+        <div class="col ml-4" id="songcontainer2">
+          <div class="row container-fluid">
+            <div id= "timeDisplay" class="col text-light container-fluid pl-0">
+            <span cursor="default" id="tracktime"> 0:00I0:00 </span>
+            </div>
+            <div id="songDuration" class="col text-light mb-5 mt-3">
+              <center>
+                <h2 class="d-inline">
+                <i class="fa fa-volume-down text-left mr-5 pr-5" aria-hidden="true"></i>
+                  <i class="fa fa-volume-up text-right ml-5 pl-5" aria-hidden="true"></i>
+                </h2>
+
+                
+                <input class="slider2 data-slider-v" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" type="range" min="1%" max="100%" value="80%" id="slidercontainer"/>
+            </center> 
+          </div>
+          </div>
+        </div>
+         <div class="col pl-0 pr-0 pt-0">
+           <center>
+          <div class=" col pl-0" id="songcontainer2">
+
+            <div class="songtitle pt-4">
+              <h2>
+              <strong class="grow text-dark">
+                Beat Preview 2
+              </strong>
+            </h2>
+          </div>
+
+
+
+            <!--Audio Interface-->
+            <img class="cover z-depth-2 hoverable" src="../img/optmized.png" width="200px" height="200px" alt="False Nobility">
+            
+            <audio id="music" preload="true" 
+            ontimeupdate="document.getElementById('tracktime').innerHTML = (Math.floor(Math.floor(Math.floor(this.currentTime)/60)) + ':' + Math.floor(Math.floor(Math.floor(this.currentTime)%60)/10)) + ((Math.floor(this.currentTime)%60)%10) + 'I' + (Math.floor(Math.floor(this.duration)/60)) + ':' + (Math.floor(this.duration)%60);"
+           >
+              <source src="../music/immortal.mp3">
+              <source src="../music/ogg/immortal.ogg">
+            </audio>
+
+            <div id="wrapper">
+              <!--Audio Controls-->
+              <div id="audioplayer">
+                <a href="https://soundcloud.com/sivancy2/immortal" target="_blank">
+                <button id="dButton" class="download"></button>
+              </a>
+                <button id="pButton" class="play"></button> 
+                <button id="rsButton" class="restart"></button>
+                <div id="timeline2">
+                  <div id="playhead"></div>
+                </div>
+              </div>
+                  <div class="pb-5"> </div>
+            </div>
+          </div>
+        </center>
+         </div>
+ 
+     </center>
+          <div class="col d-flex" id="songcontainer2">
+             <img id="SIVICON" src="../img/Sivancy-Icon 2.png" width="400px" height="400px">
+      </div>
+
+      <div class="row songcontainer1">
+        <div class="col ml-2" id="songcontainer1">
+          <div class="row container-fluid">
+            <div id= "timeDisplay" class="col text-light container-fluid pl-0">
+            <span cursor="default" id="tracktime"> 0:00I0:00 </span>
+            </div>
+            <div id="songDuration" class="col text-light mb-5 mt-3">
+              <center>
+                <h2 class="d-inline">
+                <i class="fa fa-volume-down text-left mr-5 pr-5" aria-hidden="true"></i>
+                  <i class="fa fa-volume-up text-right ml-5 pl-5" aria-hidden="true"></i>
+                </h2>
+
+                
+                <input class="slider data-slider-v" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" type="range" min="1%" max="100%" value="80%" id="slidercontainer"/>
+            </center>
+          </div>
+          </div>
+        </div>
+         <div class="col pl-0 pr-0 pt-0">
+           <center>
+          <div class=" col pl-0" id="songcontainer1">
+
+            <div class="songtitle pt-4">
+              <h2>
+              <strong class="grow text-light">
+                Distant Bliss
+              </strong>
+            </h2>
+          </div>
+
+
+
+            <!--Audio Interface-->
+            <img class="cover z-depth-2 hoverable" src="../img/optmized.png" width="200px" height="200px" alt="immortal. (SIVANCY Edit)">
+            
+            <audio id="music" preload="true" 
+            ontimeupdate="document.getElementById('tracktime').innerHTML = (Math.floor(Math.floor(Math.floor(this.currentTime)/60)) + ':' + Math.floor(Math.floor(Math.floor(this.currentTime)%60)/10)) + ((Math.floor(this.currentTime)%60)%10) + 'I' + (Math.floor(Math.floor(this.duration)/60)) + ':' + (Math.floor(this.duration)%60);"
+           >
+              <source src="../music/immortal.mp3">
+              <source src="../music/ogg/immortal.ogg">
+            </audio>
+
+            <div id="wrapper">
+              <!--Audio Controls-->
+              <div id="audioplayer">
+                <a href="https://soundcloud.com/sivancy2/immortal" target="_blank">
+                <button id="dButton" class="download"></button>
+              </a>
+                <button id="pButton" class="play"></button> 
+                <button id="rsButton" class="restart"></button>
+                <div id="timeline">
+                  <div id="playhead"></div>
+                </div>
+              </div>
+                  <div class="pb-5"> </div>
+            </div>
+          </div>
+        </center>
+         </div>
+ 
+     </center>
+          <div class="col d-flex" id="songcontainer1">
+             <img id="SIVICON" src="../img/Sivancy-Icon 2.png" width="400px" height="400px">
+      </div>
+
+
+<div class="row songcontainer1">
+        <div class="col ml-4" id="songcontainer2">
+          <div class="row container-fluid">
+            <div id= "timeDisplay" class="col text-light container-fluid pl-0">
+            <span cursor="default" id="tracktime"> 0:00I0:00 </span>
+            </div>
+            <div id="songDuration" class="col text-light mb-5 mt-3">
+              <center>
+                <h2 class="d-inline">
+                <i class="fa fa-volume-down text-left mr-5 pr-5" aria-hidden="true"></i>
+                  <i class="fa fa-volume-up text-right ml-5 pl-5" aria-hidden="true"></i>
+                </h2>
+
+                
+                <input class="slider2 data-slider-v" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" type="range" min="1%" max="100%" value="80%" id="slidercontainer"/>
+            </center> 
+          </div>
+          </div>
+        </div>
+         <div class="col pl-0 pr-0 pt-0">
+           <center>
+          <div class=" col pl-0" id="songcontainer2">
+
+            <div class="songtitle pt-4">
+              <h2>
+              <strong class="grow text-dark">
+                Zedd, Alessia Cara - Stay (SIVANCY Remix)
+              </strong>
+            </h2>
+          </div>
+
+
+
+            <!--Audio Interface-->
+            <img class="cover z-depth-2 hoverable" src="../img/optmized.png" width="200px" height="200px" alt="False Nobility">
+            
+            <audio id="music" preload="true" 
+            ontimeupdate="document.getElementById('tracktime').innerHTML = (Math.floor(Math.floor(Math.floor(this.currentTime)/60)) + ':' + Math.floor(Math.floor(Math.floor(this.currentTime)%60)/10)) + ((Math.floor(this.currentTime)%60)%10) + 'I' + (Math.floor(Math.floor(this.duration)/60)) + ':' + (Math.floor(this.duration)%60);"
+           >
+              <source src="../music/immortal.mp3">
+              <source src="../music/ogg/immortal.ogg">
+            </audio>
+
+            <div id="wrapper">
+              <!--Audio Controls-->
+              <div id="audioplayer">
+                <a href="https://soundcloud.com/sivancy2/immortal" target="_blank">
+                <button id="dButton" class="download"></button>
+              </a>
+                <button id="pButton" class="play"></button> 
+                <button id="rsButton" class="restart"></button>
+                <div id="timeline2">
+                  <div id="playhead"></div>
+                </div>
+              </div>
+                  <div class="pb-5"> </div>
+            </div>
+          </div>
+        </center>
+         </div>
+ 
+     </center>
+          <div class="col d-flex" id="songcontainer2">
+             <img id="SIVICON" src="../img/Sivancy-Icon 2.png" width="400px" height="400px">
+      </div>
+
+    <footer class="fixed-bottom container-fluid">
+      <div class="row bg-dark text-light pt-2">
+    <div class="d-flex col-xl"> 
+      <div class="d-flex col-xl">
+      <a href="https://soundcloud.com/sivancy">
+        <h2>
+          <i class="fa fa-soundcloud" aria-hidden="true"></i>
+        </h2>
+      </a>
+    </div>
+    <div class="d-flex col-xl">
+      <a href="https://www.instagram.com/sivancymusic/">
+        <h2>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </h2>
+      </a>
+    </div>
+
+    <div class="d-flex col-xl">
+      <a href="https://www.facebook.com/Sivancy/?ref=bookmarks">
+        <h2>
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        </h2>
+      </a>
+    </div>
+
+    <div class="d-flex col-xl">
+      <a href="https://twitter.com/sivancy">
+        <h2>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </h2>
+      </a>
+    </div>
+
+      <a href="https://www.youtube.com/channel/UCPg-mTMTGMj9EpHjI4ppKUQ">
+        <h2>
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </h2>
+      </a>
+    </div>
+    <div class="col-xl text-lg-center"><h2>SIVANCY</h2></div>
+    <div class="col-xl"> </div>
+  </div>
+
+    </footer>
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <script src="../js/audio.js"></script>
+    <script src="../js/creative.min.js"></script>
+
+    
+
+  </body>
+
+
+
 </html>

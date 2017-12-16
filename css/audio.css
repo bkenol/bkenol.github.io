@@ -1,0 +1,306 @@
+#pButton{
+    height:60px;
+    width: 60px;
+    border: solid #1CABE8;
+    display: inline-block;
+    transition: all 0.2s;
+
+}
+
+#dButton{
+    height: 60px;
+    width: 60px;
+    border: solid #1CABE8;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+#rsButton{
+    height: 60px;
+    width: 60px;
+    border: solid #1CABE8;
+    display: inline-block;
+    transition: all 0.2s;  
+}
+
+#pButton:hover {
+   border-width: 5px;
+    border-color: #FFF;
+    -webkit-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3); 
+    filter: brightness(150%);
+}
+
+
+#dButton:hover {
+    border-width: 5px;
+    border-color: #FFF;
+    filter: brightness(150%);
+    -webkit-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
+}
+#rsButton:hover {
+    border-width: 5px;
+    border-color: #FFF;
+    filter: brightness(150%);
+    -webkit-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
+}
+
+
+.play{
+    background: url('../img/play.png') no-repeat;
+    border-radius:  100%;
+    background-size: 70%;
+    background-position: 60% 50%;
+    margin-top: 1rem;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+    /*glow*/ 
+   
+}
+.pause{
+    background: url('../img/pause.png') no-repeat;
+    border-radius: 100%;
+    border-color: #CCC;
+    background-size: 70%;
+    background-position: 50% 50%; 
+    margin-top: 1rem;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    /*glow*/
+
+}
+
+.download {
+    background: url('../img/4501-200.png') no-repeat;
+    border-radius: 100%;
+    background-size: 70%;
+    background-position: 50% 50%; 
+    margin-top: 1rem;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    /*glow*/
+}
+
+.restart {
+    background: url('../img/512px-Undo_font_awesome.png') no-repeat;
+    border-radius: 100%;
+    background-size: 70%;
+    background-position: 50% 50%; 
+    margin-top: 1rem; 
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    /*glow*/ 
+}
+#timeline{
+    width: 90%;
+    border-radius: 10px;
+    background: white;
+    margin-top: 0.7rem;
+    -webkit-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);  
+}
+
+#timeline2{
+    width: 90%;
+    border-radius: 10px;
+    background: #343a40;
+    margin-top: 0.7rem;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+#tracktime{
+    font-size: 6em;
+    color: #1CABE8;
+}
+
+#playhead{
+    width: 0.2rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    border: solid #ACF;
+    border-width: 5px;
+    margin-top: 1px;
+    background: gray;
+}
+
+#slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    margin-top: 1rem;
+    width: 100%; /* Full-width */
+    height: 0.5rem; /* Specified height */
+    background: white; /* Grey background */
+    outline: none; /* Remove outline */
+    border-radius: 15px;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.slider2 {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    margin-top: 1rem;
+    width: 100%; /* Full-width */
+    height: 0.5rem; /* Specified height */
+    background: #343a40; /* Grey background */
+    outline: none; /* Remove outline */
+    border-radius: 15px;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    -webkit-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);  
+}
+
+.slider2:hover {
+    -webkit-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);  
+}
+
+/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 2rem; /* Set a specific slider handle width */
+    height: 2rem; /* Slider handle height */
+    background: #ACF; /* Green background */
+    border-radius: 100%;
+    cursor: pointer; /* Cursor on hover */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.slider2::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 2rem; /* Set a specific slider handle width */
+    height: 2rem; /* Slider handle height */
+    background: #ACF; /* Green background */
+    border-radius: 100%;
+    cursor: pointer; /* Cursor on hover */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    width: 3rem;
+    height: 3rem;
+}
+.slider2::-webkit-slider-thumb:hover {
+    width: 3rem;
+    height: 3rem;
+}
+
+.slider::-moz-range-thumb {
+    width: 2rem; /* Set a specific slider handle width */
+    height: 2rem; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider2::-moz-range-thumb {
+    width: 2rem; /* Set a specific slider handle width */
+    height: 2rem; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+span {
+    /*background-color: #1E1E1F;*/
+    border: solid #1CABE8;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+span:hover {
+    border-color:white;
+    
+    -webkit-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 30px 40px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3); 
+    filter: brightness(150%);
+}
+
+#songDuration {
+    border: solid #1CABE8;
+    border-radius: 15px;
+    border-bottom-width: 2rem;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+strong.grow{
+}
+
+.cover {
+    border: solid #1CABE8;
+    padding: 0.5rem;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+#SIVICON{
+    opacity: 0.3;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+#SIVICON:hover {
+    filter: invert(100%;);
+}
+
+#songcontainer1 {
+    background-color: #343a40;
+}
+
+#songcontainer2 {
+    background-color: white;
+}
+
+#songcontainer2 i {
+    color: #343a40;
+}
+
+#timeDisplay {
+    margin: 3em;
+}
